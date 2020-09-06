@@ -1,7 +1,7 @@
 <template>
   <v-app light>
     <v-app-bar :clipped-left="clipped" fixed app>
-      <nuxt-link to="/">{{ title }}</nuxt-link>
+      <v-btn nuxt to="/">{{ title }}</v-btn>
       <v-spacer />
       <v-btn icon @click.stop="openSearch">
         <v-icon>mdi-magnify</v-icon>
@@ -22,12 +22,8 @@
       temporary
       fixed
     >
-      <SearchAutocomplete v-show="!showBasket" />
-      <v-list v-show="showBasket">
-        <v-list-item to="/basket">
-          <v-list-item-title>Koszyk</v-list-item-title>
-        </v-list-item>
-      </v-list>
+      <SearchAutocomplete v-if="!showBasket" />
+      <BasketDrawerList v-else />
     </v-navigation-drawer>
     <v-footer :absolute="!fixed" app>
       <span>&copy; {{ new Date().getFullYear() }}</span>
@@ -36,12 +32,8 @@
 </template>
 
 <script>
-import SearchAutocomplete from '../components/SearchAutomplete'
-
 export default {
-  components: {
-    SearchAutocomplete,
-  },
+  name: 'Default',
   data() {
     return {
       clipped: false,
@@ -69,6 +61,9 @@ export default {
     openBasket() {
       this.rightDrawer = !this.rightDrawer
       this.showBasket = true
+    },
+    test() {
+      this.$store.dispatch('products/updateBasket')
     },
   },
 }
