@@ -19,4 +19,5 @@ $ npm run generate
 
 TODO:
 
-- obsługa listy towarów w koszyku
+- obsługa listy towarów w koszyku - usuwanie produktu z koszyka,
+- stworzenie hotspota wyświetlanego na każdej stronie
