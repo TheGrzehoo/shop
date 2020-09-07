@@ -59,9 +59,13 @@ export default {
       this.$refs.productForm.validate()
       if (this.size) {
         this.addingToCart = true
+        const { name, id, icon, price } = this.product
         this.addProduct({
-          id: this.product.id,
+          id,
           size: this.size,
+          name,
+          icon,
+          price,
         }).then((info) => {
           this.addingToCart = false
           if (info.success) {

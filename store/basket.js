@@ -3,9 +3,7 @@ const state = () => ({
 })
 
 const getters = {
-  getProducts() {
-    return state.products
-  },
+  getProducts: (state) => state.products,
 }
 
 const mutations = {
