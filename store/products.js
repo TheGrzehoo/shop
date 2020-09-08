@@ -18,6 +18,8 @@ const state = () => ({
       ],
       icon:
         'https://demo227-pl.yourtechnicaldomain.com/pol_pm_Playstation-4-Slim-7_1.jpg',
+      description:
+        'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat ipsa molestiae, consequatur veritatis dicta, modi optio reprehenderit consectetur mollitia deleniti, asperiores et fuga corporis! Inventore beatae pariatur quo cum quisquam?',
     },
     {
       id: 2,
@@ -37,6 +39,8 @@ const state = () => ({
       ],
       icon:
         'https://demo227-pl.yourtechnicaldomain.com/pol_pm_Playstation-4-Slim-7_1.jpg',
+      description:
+        'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat ipsa molestiae, consequatur veritatis dicta, modi optio reprehenderit consectetur mollitia deleniti, asperiores et fuga corporis! Inventore beatae pariatur quo cum quisquam?',
     },
     {
       id: 3,
@@ -56,6 +60,8 @@ const state = () => ({
       ],
       icon:
         'https://demo227-pl.yourtechnicaldomain.com/pol_pm_Playstation-4-Slim-7_1.jpg',
+      description:
+        'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat ipsa molestiae, consequatur veritatis dicta, modi optio reprehenderit consectetur mollitia deleniti, asperiores et fuga corporis! Inventore beatae pariatur quo cum quisquam?',
     },
     {
       id: 4,
@@ -75,6 +81,8 @@ const state = () => ({
       ],
       icon:
         'https://demo227-pl.yourtechnicaldomain.com/pol_pm_Playstation-4-Slim-7_1.jpg',
+      description:
+        'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat ipsa molestiae, consequatur veritatis dicta, modi optio reprehenderit consectetur mollitia deleniti, asperiores et fuga corporis! Inventore beatae pariatur quo cum quisquam?',
     },
   ],
 })
@@ -85,6 +93,7 @@ const getters = {
     state.products.find((product) => product.id === id),
   getProducts: (state) => (idArray) =>
     state.products.filter((item) => idArray.includes(item.id)),
+  hotspotProducts: (state) => state.products.slice(0, 4),
 }
 
 export default {

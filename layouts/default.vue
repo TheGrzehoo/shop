@@ -1,7 +1,9 @@
 <template>
   <v-app light>
     <v-app-bar :clipped-left="clipped" fixed app>
-      <v-btn nuxt to="/">{{ title }}</v-btn>
+      <nuxt-link to="/"
+        ><img src="/Shop_logo.png" max-height="100%" alt="Sklep na Vue"
+      /></nuxt-link>
       <v-spacer />
       <v-btn icon @click.stop="openSearch">
         <v-icon>mdi-magnify</v-icon>

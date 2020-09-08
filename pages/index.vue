@@ -1,11 +1,38 @@
 <template>
-  <v-row column justify-center align-center>
-    <v-flex xs12 sm8 md6>
-      <div class="text-center">Strona główna</div>
-    </v-flex>
-  </v-row>
+  <v-container>
+    <div class="mb-5">
+      <v-carousel
+        cycle
+        height="400"
+        hide-delimiter-background
+        show-arrows-on-hover
+      >
+        <v-carousel-item v-for="(slide, i) in slides" :key="i">
+          <v-sheet :color="colors[i]" height="100%">
+            <v-row class="fill-height" align="center" justify="center">
+              <div class="display-3">{{ slide }}</div>
+            </v-row>
+          </v-sheet>
+        </v-carousel-item>
+      </v-carousel>
+    </div>
+    <Hotspot label="Polecane produkty" />
+  </v-container>
 </template>
 
 <script>
-export default {}
+export default {
+  data() {
+    return {
+      colors: [
+        'indigo',
+        'warning',
+        'pink darken-2',
+        'red lighten-1',
+        'deep-purple accent-4',
+      ],
+      slides: ['Super', 'Sklep', 'Na', 'Vue', '!!!!!!'],
+    }
+  },
+}
 </script>

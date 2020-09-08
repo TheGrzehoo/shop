@@ -27,10 +27,14 @@
         >
       </v-form>
     </v-col>
+    <v-col cols="12"> {{ product.description }} </v-col>
     <AddToBasketDialog
       :show-dialog="showAddToBasketDialog"
       :on-close="closeDialog"
     />
+    <v-col cols="12">
+      <Hotspot label="Może Ci się przydać!" />
+    </v-col>
   </v-row>
 </template>
 
