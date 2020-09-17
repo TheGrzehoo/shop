@@ -16,7 +16,3 @@ $ npm run start
 # generate static project
 $ npm run generate
 ```
-
-TODO:
-
-- obsługa listy towarów w koszyku - usuwanie produktu z koszyka,
